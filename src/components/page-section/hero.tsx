@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Hero = () => {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   const students = [
     {
       id: 1,
@@ -72,13 +72,15 @@ const Hero = () => {
       </motion.div>
       <div className="flex md:translate-x-0 translate-x-[-2%] flex-col gap-2 relative md:items-start items-center justify-center">
         <h1 className="text-4xl  uppercase lg:text-5xl  md:text-start text-center font-bold text-gray-900 leading-tight">
-          Empowering <span className="text-blue-600">Teachers</span> Transforming
-          Classrooms
+          Welcome to the <span className="text-primary">Language Study</span>{" "}
           <br />
+          Platform VERZIO
         </h1>
         <p className="text-sm text-gray-600  max-w-lg leading-relaxed">
-          Welcome to VERZIO–The Language Chamber, where we define English
-          communication and teaching excellence for educators.
+          Language is more than just a skill — it's a powerful tool in today’s
+          global marketplace. In a world that thrives on connection, mastering a
+          second or third language gives you a significant edge in career
+          advancement, business opportunities, and cultural understanding.
         </p>
         <div className="flex items-center mt-10 gap-2">
           <Button>Get Started</Button>
@@ -132,7 +134,10 @@ const Hero = () => {
 
         <motion.div
           className="absolute rounded-xl bg-white dark:bg-gray-800 shadow-lg p-3 w-36"
-          style={{ bottom: isMobile ? "10%" : "10%", left: isMobile ? "10%" : "15%" }}
+          style={{
+            bottom: isMobile ? "10%" : "10%",
+            left: isMobile ? "10%" : "15%",
+          }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
@@ -160,7 +165,10 @@ const Hero = () => {
 
         <motion.div
           className="absolute rounded-xl bg-white dark:bg-gray-800 shadow-lg p-3 w-40"
-          style={{ top: isMobile ? "25%" : "25%", right: isMobile ? "-80%" : "50%" }}
+          style={{
+            top: isMobile ? "25%" : "25%",
+            right: isMobile ? "-80%" : "50%",
+          }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}
@@ -194,7 +202,10 @@ const Hero = () => {
 
         <motion.div
           className="absolute rounded-xl bg-white dark:bg-gray-800 shadow-lg p-3 w-40"
-          style={{ top: isMobile ? "80%" : "30%", right: isMobile ? "-65%" : "5%" }}
+          style={{
+            top: isMobile ? "80%" : "30%",
+            right: isMobile ? "-65%" : "5%",
+          }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
