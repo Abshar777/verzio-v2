@@ -22,12 +22,12 @@ const Nav = () => {
             Verzio
           </h1>
           <div className="hidden md:flex text-sm font-medium text-gray-700 justify-center items-center gap-5">
-            <Link href="/">Home</Link>
-            <Link href="/">About</Link>
-            <Link className="text-primary" href="/">
+            <Link className="text-primary" href="/">Home</Link>
+            <Link className="pointer-events-none opacity-50" href="/">About</Link>
+            <Link className="pointer-events-none opacity-50" href="/">
               Contact
             </Link>
-            <Link href="/">Blog</Link>
+            <Link className="pointer-events-none opacity-50" href="/">Blog</Link>
           </div>
         </div>
 

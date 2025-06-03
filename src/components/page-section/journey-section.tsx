@@ -7,26 +7,26 @@ import { SectionHeader } from "../ui/section-header";
 
 const journeySteps: JourneyStepProps[] = [
   {
-    title: "Tell us about yourself",
-    description: "Let us know about your learning style, what your current proficiency level is and your goals for learning.",
+    title: "English Communication Program",
+    description: "Strengthen grammar, vocabulary, and fluency.",
     icon: <FileText className="h-7 w-7 text-primary" />,
     index: 0
   },
   {
-    title: "Get expertly matched",
-    description: "Our class coordinator will pair you up with your perfect tutor based on your profile and preferences.",
+    title: "Faculty Dynamation",
+    description: "Transform teaching skills through leadership & presentation training.",
     icon: <Users className="h-7 w-7 text-primary" />,
     index: 1
   },
   {
-    title: "Take a free 30 min trial lesson",
-    description: "Get familiar with your tutor and experience what it's like to learn with Live webinar.",
+    title: "Innovative Learning Approach",
+    description: "Interactive sessions, real-time practice & reinforcement",
     icon: <Video className="h-7 w-7 text-primary" />,
     index: 2
   },
   {
-    title: "Schedule future lessons",
-    description: "Use your online calendar to pick dates and times that suit you for future classes.",
+    title: "Flexible Learning",
+    description: "Online & offline training tailored as per requirement",
     icon: <Calendar className="h-7 w-7 text-primary" />,
     index: 3
   }
@@ -37,7 +37,7 @@ export function JourneySection() {
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <SectionHeader 
-          title="Start your learning journey" 
+          title="Our Core Offerings" 
           subtitle="Simple Steps"
           centered 
         />

@@ -3,8 +3,15 @@
 import { motion } from "framer-motion";
 import { GraduationCap, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { useEffect, useState } from "react";    
 export function CtaSection() {
+    const [count, setCount] = useState(200);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCount(count + 1);
+        }, 1000);
+        return () => clearInterval(interval);
+    }, [count]);
   return (
     <section className="py-16 lg:py-24">
       <div className="container mx-auto px-4">
@@ -12,29 +19,19 @@ export function CtaSection() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary-foreground opacity-10" />
           
           {/* Animated dots background */}
-          <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (
+          <div className="absolute  inset-0 overflow-hidden">
+            {[...Array(count)].map((_, i) => (
               <motion.div
-                key={i}
-                className="absolute rounded-full bg-white/10"
+                key={i  }
+                className="absolute w-2 h-2 giggle bg-white/10"
                 style={{
                   top: `${Math.random() * 100}%`,
                   left: `${Math.random() * 100}%`,
-                  width: `${Math.random() * 20 + 5}px`,
-                  height: `${Math.random() * 20 + 5}px`,
-                }}
-                animate={{
-                  y: [0, Math.random() * 50 - 25],
-                  opacity: [0.1, 0.3, 0.1],
-                }}
-                transition={{
-                  duration: Math.random() * 5 + 5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
+                
                 }}
               />
             ))}
+        
           </div>
           
           <div className="relative z-10 py-16 px-6 md:px-12 lg:px-16 text-center">

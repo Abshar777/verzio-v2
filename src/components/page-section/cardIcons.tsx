@@ -21,6 +21,8 @@ import {
 } from "lucide-react";
 import { LuAlarmClock } from "react-icons/lu";
 import { TbBrandTelegram, TbBrandWhatsapp } from "react-icons/tb";
+import Gauge from "../global/speedoMeter";
+import { LanguageChart } from "../global/langChart";
 
 export default function Component() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -36,8 +38,8 @@ export default function Component() {
   const cards = [
     {
       id: 1,
-      title: "Workshop",
-      subtitle: "Learning form scratch",
+      title: "Interactive Training",
+      subtitle: "Real-world communication exercises.",
       author: "Robert Fox",
       bgColor: "bg-gradient-to-br from-pink-400 to-pink-400",
       textColor: "text-white",
@@ -58,8 +60,8 @@ export default function Component() {
     },
     {
       id: 3,
-      title: "Upcoming",
-      subtitle: "Today's meeting",
+      title: "Balanced practice sessions",
+      subtitle: "Vocabulary building, Articulation, and Scripting.",
       description: "Join meeting on Google meet",
       bgColor: "bg-gradient-to-br from-purple-400 to-indigo-600",
       textColor: "text-white",
@@ -68,23 +70,24 @@ export default function Component() {
     {
       id: 4,
       title: "Time Management",
+      image: "/images/time.png",
       bgColor: "bg-gradient-to-br from-pink-400 to-pink-400",
       textColor: "text-white",
       hasIllustration: true,
     },
     {
       id: 5,
-      title: "Live Stream",
-      description:
-        "It allows participants to join from different locations using a computer, tablet, or smartphone.",
+      title: "These langusges have the most speakers",
+      description: "Echo Chamber approach for daily practice",
       bgColor: "bg-gradient-to-br from-indigo-500 to-purple-500",
       textColor: "text-white",
       hasStreamIllustration: true,
     },
     {
       id: 6,
-      title: "Go Premium",
-      description: "Explore 25k+ course with lifetime membership",
+      title: "Fluency Reinforcement",
+
+      description: "Echo Chamber approach for daily practice",
       bgColor: "bg-gradient-to-br from-pink-400 to-pink-400",
       textColor: "text-white",
       hasButton: true,
@@ -148,30 +151,8 @@ export default function Component() {
               </div>
 
               {/* Circular Progress */}
-              <div className="relative w-16 h-16 mb-4">
-                <svg
-                  className="w-16 h-16 transform -rotate-90"
-                  viewBox="0 0 64 64"
-                >
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="28"
-                    fill="none"
-                    stroke="rgba(255,255,255,0.2)"
-                    strokeWidth="4"
-                  />
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="28"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="4"
-                    strokeDasharray={`${120 + animationPhase * 10} 176`}
-                    className="transition-all duration-1000"
-                  />
-                </svg>
+              <div className="relative  mb-4">
+                <Gauge value={80} />
               </div>
             </div>
 
@@ -210,15 +191,23 @@ export default function Component() {
 
               {/* Avatar Group */}
               <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className={`w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full border-2 border-white transition-transform duration-300 ${
-                      hoveredCard === 3 ? "scale-110" : ""
-                    }`}
-                    style={{ animationDelay: `${i * 100}ms` }}
-                  ></div>
-                ))}
+                {["/images/a1.jpg", "/images/a2.jpg", "/images/a3.jpg"].map(
+                  (i, ind) => (
+                    <div
+                      key={i}
+                      className={`w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full border-2 border-white transition-transform duration-300 ${
+                        hoveredCard === 3 ? "scale-110" : ""
+                      }`}
+                      style={{ animationDelay: `${(ind + 1) * 100}ms` }}
+                    >
+                      <img
+                        src={i}
+                        alt="Avatar"
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
+                  )
+                )}
               </div>
             </div>
 
@@ -236,31 +225,11 @@ export default function Component() {
             <h2 className="text-xl font-bold mb-4">{cards[3].title}</h2>
 
             {/* Illustration placeholder */}
-            <div className="relative">
-              <div className="flex items-center justify-center space-x-2 mb-4">
-                <div
-                  className={`w-12 h-16 bg-white/10 bg-opacity-30 rounded-lg transition-transform duration-500 ${
-                    hoveredCard === 4 ? "scale-105 rotate-3" : ""
-                  }`}
-                ></div>
-                <div
-                  className={`w-12 h-16 bg-white/10 bg-opacity-40 rounded-lg transition-transform duration-500 ${
-                    hoveredCard === 4 ? "scale-105 -rotate-2" : ""
-                  }`}
-                ></div>
-                <div
-                  className={`w-12 h-16 bg-white/10 bg-opacity-35 rounded-lg transition-transform duration-500 ${
-                    hoveredCard === 4 ? "scale-105 rotate-1" : ""
-                  }`}
-                ></div>
-              </div>
-
-              <div className="absolute bottom-0 right-0">
-                <div className="w-12 h-12 bg-white/10 bg-opacity-30 rounded-full flex items-center justify-center">
-                  <Clock className="w-6 h-6" />
-                </div>
-              </div>
-            </div>
+            <img
+              src={cards[3].image}
+              alt={cards[3].title}
+              className="w-full h-full object-cover"
+            />
           </Card>
 
           {/* Live Stream Card */}
@@ -270,33 +239,8 @@ export default function Component() {
             onMouseLeave={() => setHoveredCard(null)}
           >
             <h2 className="text-2xl font-bold mb-4">{cards[4].title}</h2>
-            <p className="text-sm opacity-90 mb-6 max-w-md">
-              {cards[4].description}
-            </p>
 
-            {/* Stream Illustration */}
-            {/* <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <div className="flex gap-2 mb-4">
-                  <div className="w-16 h-10 bg-white bg-opacity-20 rounded border-2 border-white border-opacity-30"></div>
-                  <div className="w-16 h-10 bg-white bg-opacity-30 rounded border-2 border-white border-opacity-50"></div>
-                </div>
-              </div>
-
-              <div
-                className={`transition-transform duration-700 ${
-                  hoveredCard === 5 ? "scale-110" : ""
-                }`}
-              >
-                <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                  <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <div className="w-8 h-8 bg-white rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-
-            {/* <Video className="w-8 h-8 opacity-20 absolute top-4 right-4" /> */}
+            <LanguageChart />
           </Card>
 
           {/* Go Premium Card */}

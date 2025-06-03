@@ -7,6 +7,7 @@ import { JourneySection } from "@/components/page-section/journey-section";
 import { CtaSection } from "@/components/page-section/cta-section";
 import { PricingSection } from "@/components/page-section/pricingSection";
 import { TeamSection } from "@/components/page-section/team-section";
+import Vision from "@/components/page-section/vision";
 export default function Home() {
   return (
    <div className="w-full md:px-10 h-full relative">
@@ -15,6 +16,7 @@ export default function Home() {
     <CoursesSection/>
     <JourneySection/>
     <PricingSection/>
+    <Vision/>
     <TeamSection/>
     <CtaSection/>
    </div>
