@@ -70,7 +70,7 @@ const Hero = () => {
       >
         <HiRocketLaunch className="text-black/20  text-4xl" />
       </motion.div>
-      <div className="flex md:translate-x-0 translate-x-[-5%] flex-col gap-2 relative md:items-start items-center justify-center">
+      <div className="flex md:translate-x-0 translate-x-[-2%] flex-col gap-2 relative md:items-start items-center justify-center">
         <h1 className="text-4xl  uppercase lg:text-5xl  md:text-start text-center font-bold text-gray-900 leading-tight">
           Empowering <span className="text-blue-600">Teachers</span> Transforming
           Classrooms
@@ -93,7 +93,7 @@ const Hero = () => {
           <TbSchool className="text-black/20  text-6xl" />
         </motion.div>
       </div>
-      <div className="relative h-[400px] md:left-auto left-[-100px] md:scale-100 scale-[.6] lg:h-[500px]">
+      <div className="relative h-[400px] md:left-auto left-[-80px] md:scale-100 scale-[.69] lg:h-[500px]">
         {students.map((student) => (
           <motion.div
             key={student.id}
