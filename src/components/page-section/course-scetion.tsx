@@ -91,7 +91,7 @@ export default function CompliancePage() {
               transition={{ duration: 0.7, delay: 0.3 }}
             >
               <div className="relative w-full bg-gray-500 max-w-md rounded-xl h-[500px] lg:h-[600px]">
-              <video src="/2.mp4" autoPlay muted loop className="w-full h-full object-cover rounded-xl"></video>
+              <video src="/3.mp4" autoPlay muted loop className="w-full h-full object-cover rounded-xl"></video>
               </div>
             </motion.div>
           </div>
