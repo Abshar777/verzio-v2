@@ -49,7 +49,9 @@ export function PriceCard({ plan, index }: { plan: PriceProps; index: number }) 
         ))}
       </ul>
 
-      <Button className="w-full" variant={index === 1 ? "default" : "outline"}>
+      <Button onClick={() => {
+        window.location.href = "#contact";
+      }} className="w-full" variant={index === 1 ? "default" : "outline"}>
         Get started
       </Button>
     </motion.div>

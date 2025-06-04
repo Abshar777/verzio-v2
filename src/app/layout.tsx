@@ -3,6 +3,7 @@ import { Geist, Geist_Mono,DM_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/global/nav";
 import { Footer } from "@/components/global/footer";
+import { Toaster } from "sonner";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} relative ${dmSans.variable} bg-gray-100 antialiased`}
       >
+        <Toaster />
         <Nav />
         {children}
         <Footer/>

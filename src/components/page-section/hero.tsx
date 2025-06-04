@@ -83,8 +83,8 @@ const Hero = () => {
           advancement, business opportunities, and cultural understanding.
         </p>
         <div className="flex items-center mt-10 gap-2">
-          <Button>Get Started</Button>
-          <Button variant="outline">Learn More</Button>
+          <Button ><a href="#contact">Get Started</a></Button>
+          <Button variant="outline"><a href="#contact">Learn More</a></Button>
         </div>
         <motion.div
           initial={{ opacity: 0, y: 100 }}

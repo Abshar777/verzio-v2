@@ -21,14 +21,14 @@ const Nav = () => {
             <img src="/images/logo2.png" alt="Verzio" className="w-10 h-10" />
             Verzio
           </h1>
-          <div className="hidden md:flex text-sm font-medium text-gray-700 justify-center items-center gap-5">
+          {/* <div className="hidden md:flex text-sm font-medium text-gray-700 justify-center items-center gap-5">
             <Link className="text-primary" href="/">Home</Link>
             <Link className="pointer-events-none opacity-50" href="/">About</Link>
             <Link className="pointer-events-none opacity-50" href="/">
               Contact
             </Link>
             <Link className="pointer-events-none opacity-50" href="/">Blog</Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex justify-center items-center gap-5">
@@ -36,7 +36,7 @@ const Nav = () => {
             <Input className="w-full" type="text" placeholder="Search" />
             <CiSearch className="text-gray-500 absolute right-3" />
           </div>
-          <Button>Try for free</Button>
+          <Button ><a href="#contact">Try for free</a></Button>
         </div>
       </motion.div>
     </div>

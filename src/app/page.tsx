@@ -8,6 +8,7 @@ import { CtaSection } from "@/components/page-section/cta-section";
 import { PricingSection } from "@/components/page-section/pricingSection";
 import { TeamSection } from "@/components/page-section/team-section";
 import Vision from "@/components/page-section/vision";
+import ContactForm from "@/components/page-section/contactForm";
 export default function Home() {
   return (
    <div className="w-full md:px-10 h-full relative">
@@ -18,6 +19,7 @@ export default function Home() {
     <PricingSection/>
     <Vision/>
     <TeamSection/>
+    <ContactForm/>
     <CtaSection/>
    </div>
   );

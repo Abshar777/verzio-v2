@@ -33,17 +33,17 @@ const instructors: InstructorProps[] = [
 
 const teamMembers = [
   {
-    name: "ANAGHA K [M.A., B.Ed.] ",
+    name: "ANAGHA K  ",
     role: "FLUENCY ARCHITECT",
     image: "/images/anaga.jpeg",
   },
   {
-    name: "NAJILA HAWADHA [M.A, B.Ed.] ",
+    name: "NAJILA HAWADHA ",
     role: "CHAIR OF EXPERSSION",
     image: "/images/najila.jpeg",
   },
   {
-    name: "BASHEER PA [M.A., B.Ed.] ",
+    name: "BASHEER PA  ",
     role: "impact Strategist & Coach",
     image: "/images/basheer.jpeg",
   },
@@ -53,7 +53,7 @@ const teamMembers = [
     image: "/images/nafila.jpeg",
   },
   {
-    name: "JINSH SHAJI  [M.A., B.Ed.] ",
+    name: "JINSH SHAJI   ",
     role: "LINGUISTIC NAVIGATOR",
     image: "/images/jinsh.jpeg",
   },
@@ -74,11 +74,7 @@ export function TeamSection() {
     <section className="py-16 overflow-hidden relative md:py-24">
       <div className="dot-container"></div>
       <div className="container mx-auto px-4">
-        <SectionHeader
-          title="Meet The Passionate Team"
-          subtitle="Our Instructor"
-          centered
-        />
+        <SectionHeader title="Meet The Passionate Team" subtitle="" centered />
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-6 mt-12"

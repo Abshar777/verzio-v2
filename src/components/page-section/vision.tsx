@@ -127,23 +127,29 @@ const Vision = () => {
         >
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
             <motion.button 
-              className="px-8 py-4 bg-primary text-white font-semibold rounded-xl shadow-lg"
+              className="px-8 py-4 cursor-pointer bg-primary text-white font-semibold rounded-xl shadow-lg"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 20px 40px -12px rgba(59, 130, 246, 0.5)"
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                window.location.href = "#contact";
+              }}
               transition={{ duration: 0.2 }}
             >
               Join Our Mission
             </motion.button>
             <motion.button 
-              className="px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-700 font-semibold rounded-xl border border-gray-200 shadow-lg"
+              className="px-8 py-4 cursor-pointer bg-white/80 backdrop-blur-sm text-gray-700 font-semibold rounded-xl border border-gray-200 shadow-lg"
               whileHover={{ 
                 scale: 1.05,
                 backgroundColor: "rgba(255, 255, 255, 0.95)"
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                window.location.href = "#contact";
+              }}
               transition={{ duration: 0.2 }}
             >
               Learn More

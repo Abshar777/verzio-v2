@@ -29,10 +29,9 @@ export function InstructorCard({ instructor, index }: { instructor: InstructorPr
         </div>
         <div className="p-6 text-center">
           <h3 className="text-xl font-semibold mb-1">{instructor.name}</h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm  text-muted-foreground">
             {instructor.role}
-            <span className="text-primary font-medium ml-1">Learn</span>
-            <span className="text-yellow-500 font-medium">ing</span>
+           
           </p>
         </div>
       </div>

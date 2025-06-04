@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";    
+import ContactForm from "./contactForm";
 export function CtaSection() {
     const [count, setCount] = useState(200);
     useEffect(() => {
@@ -53,9 +54,10 @@ export function CtaSection() {
               </h2>
               
               <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                Join thousands of students already learning with us. Get access to over 1,000+ courses and expert instructors.
+                Join thousands of students already learning with us. Get access to over Our courses and expert instructors.
               </p>
               
+           
               <motion.div
                 className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"
                 whileInView={{ opacity: 1 }}
@@ -66,6 +68,9 @@ export function CtaSection() {
                   size="lg" 
                   variant="secondary"
                   className="w-full sm:w-auto"
+                  onClick={() => {
+                    window.location.href = "#contact";
+                  }}
                 >
                   Browse All Courses
                 </Button>
@@ -74,6 +79,9 @@ export function CtaSection() {
                   size="lg" 
                   variant="outline"
                   className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/20"
+                  onClick={() => {
+                    window.location.href = "#contact";
+                  }}
                 >
                   Talk to an Advisor
                   <ArrowRight className="ml-2 h-4 w-4" />

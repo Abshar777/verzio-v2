@@ -28,7 +28,7 @@ export default function CompliancePage() {
                 className="mb-12"
               >
                 <div className=" text-primary uppercase text-4xl md:text-5xl font-bold py-3  mb-8">
-                  Our Core Compitance
+                  Our Core Competence
                 </div>
               </motion.div>
 
@@ -40,7 +40,7 @@ export default function CompliancePage() {
 
               <ContentSection
                 index={1}
-                title="Faculty Dinamation"
+                title="Faculty Dynamation"
                 description="Transform teaching skills through leadership & presentation training."
               />
 
