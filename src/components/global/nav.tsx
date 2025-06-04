@@ -36,7 +36,7 @@ const Nav = () => {
             <Input className="w-full" type="text" placeholder="Search" />
             <CiSearch className="text-gray-500 absolute right-3" />
           </div>
-          <Button ><a href="#contact">Try for free</a></Button>
+          <Button ><a href="#contact">Get Started</a></Button>
         </div>
       </motion.div>
     </div>
