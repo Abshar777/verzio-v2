@@ -62,11 +62,7 @@ const teamMembers = [
     role: "REACH AMBASSADOR",
     image: "/images/arathi.jpeg",
   },
-  {
-    name: "AKASH  ",
-    role: "ONLINE PRESCENCE INNOVATOR",
-    image: "/images/akash.jpeg",
-  },
+  
 ];
 
 export function TeamSection() {
@@ -77,7 +73,7 @@ export function TeamSection() {
         <SectionHeader title="Meet The Passionate Team" subtitle="" centered />
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-6 mt-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 mt-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
